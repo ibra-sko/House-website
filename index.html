@@ -197,28 +197,27 @@
  </section>
 
 <!--Contact-Form-->
-<div class="container">
-    <h1>Rejoignez Nous !</h1>
-    <form action="/inscription" method="post">
-      <input type="text" name="nom" placeholder="Nom complet" required>
-      <input type="email" name="email" placeholder="Adresse e-mail" required>
-      <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
-      <button type="submit">S'inscrire</button>
+<section class="contact-form">
+    <h3>Need Help? <br> We Are Here!</h3>
+    <form id="contactForm" action="#" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" id="name-box" placeholder="Enter Your Name" required pattern="[A-Za-z]+" title="Please enter your name with only alphabetic characters">
+
+        <label for="last-name">Your Last Name:</label>
+        <input type="text" name="last-name" id="last-name-box" placeholder="Enter Your Last Name" required pattern="[A-Za-z]+" title="Please enter your last name with only alphabetic characters">
+
+        <label for="date-of-birth">Date of Birth:</label>
+        <input type="date" name="date-of-birth" id="date-of-birth-box" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" id="email-box" placeholder="Enter Your Email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea name="message" id="message-box" cols="30" rows="10" placeholder="Enter Your Message" required minlength="30"></textarea>
+
+        <input type="submit" value="Send" class="btn">
     </form>
-  </div>
-
-
-
-
- <!-- Newsletter-->
-    <section class="newsletter">
-            <h3>Need Help? <br> We Are Here!</h3>
-            <form action="">
-                <input type="email"  name="" id="email-box" placeholder= "Enter Your Email">
-                <input type="submit" value="Send" class="btn">
-            </form>
-    </section>
-
+</section>
 
 
     <!-- Footer-->
@@ -257,6 +256,31 @@
 
     menuIcon.addEventListener('click', () => {
         navbar.classList.toggle('active');
+    });
+
+     // Validation du formulaire
+     document.getElementById("contactForm").addEventListener("submit", function(event) {
+        var name = document.getElementById("name-box").value;
+        var lastName = document.getElementById("last-name-box").value;
+        var email = document.getElementById("email-box").value;
+        var message = document.getElementById("message-box").value;
+
+        // Vérification des règles de validation
+        var namePattern = /^[A-Za-z]+(?:-[A-Za-z]+)?$/;// Expression régulière pour les noms et prénoms composés
+
+        if (!namePattern.test(name)) {
+            alert("Please enter your name with only alphabetic characters.");
+            event.preventDefault();
+            return false;
+        }
+
+        if (!namePattern.test(lastName)) {
+            alert("Please enter your last name with only alphabetic characters.");
+            event.preventDefault();
+            return false;
+        }
+
+        return true;
     });
 </script>
 
