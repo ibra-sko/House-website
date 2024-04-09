@@ -1,0 +1,36 @@
+WEBVTT
+
+
+::cue(v[voice="Speaker1"]) { color: white }
+::cue(v[voice=""]) { color: lime }
+
+1
+00:00:01.070 --> 00:00:05.960
+<v Speaker1>Bonjour, je suis Nathalie Soulier, mandataire
+indépendante sur Béziers et ses environs.
+
+2
+00:00:05.990 --> 00:00:10.280
+<v Speaker1>Fort de plusieurs années d'expérience, je
+suis l'experte qu'il vous faut.
+
+3
+00:00:10.310 --> 00:00:12.980
+<v Speaker1>Achat, vente, estimation.
+
+4
+00:00:13.070 --> 00:00:15.920
+<v Speaker1>Rencontrons nous et parlons de votre projet.
+
+5
+00:00:16.130 --> 00:00:18.950
+<v Speaker1>Pour me joindre, voici mon téléphone.
+
+6
+00:00:19.190 --> 00:00:22.550
+<v Speaker1>Voici mon mail et mes réseaux sociaux pour
+me suivre.
+
+7
+00:00:22.760 --> 00:00:23.750
+<v >A très vite.

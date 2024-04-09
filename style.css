@@ -144,6 +144,14 @@ header {
     margin-bottom: 1rem;
 }
 
+.video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    
+}
+
 .about{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem,auto));
@@ -409,6 +417,8 @@ header {
   .footer-bottom a:hover {
     color: var(--main-color);
   }
+
+
   
 
 /* Making Responsive */

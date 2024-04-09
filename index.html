@@ -35,6 +35,14 @@
             <a href="sign-up.html" class="btn">Sign Up</a>
         </div>
     </section>
+    <!-- Video-->
+    <div class="video-container">
+    <video controls>
+        <source src="video/immobilier.mp4" type="video/mp4">
+        <source src="video/immobilier.webm" type="video/webm">
+        <track src="video/immobilier.vtt" kind="subtitles" srclang="fr" label="French">
+    </video>
+    </div>
     <!-- About Us-->
     <section class="about container" id="about">
         <div class="about-img">
@@ -206,6 +214,9 @@
         <label for="last-name">Your Last Name:</label>
         <input type="text" name="last-name" id="last-name-box" placeholder="Enter Your Last Name" required pattern="[A-Za-z]+" title="Please enter your last name with only alphabetic characters">
 
+        <label for="phone">Your Phone:</label>
+        <input type="tel" name="phone" id="phone-box" placeholder="Enter Your Phone" required pattern="[0-9]{10}" title="Please enter a valid phone number">
+
         <label for="date-of-birth">Date of Birth:</label>
         <input type="date" name="date-of-birth" id="date-of-birth-box" required>
 
@@ -213,7 +224,7 @@
         <input type="email" name="email" id="email-box" placeholder="Enter Your Email" required>
 
         <label for="message">Your Message:</label>
-        <textarea name="message" id="message-box" cols="30" rows="10" placeholder="Enter Your Message" required minlength="30"></textarea>
+        <textarea name="message" id="message-box" cols="30" rows="10" placeholder="Enter Your Message" required minlength="5"></textarea>
 
         <input type="submit" value="Send" class="btn">
     </form>
@@ -264,12 +275,21 @@
         var lastName = document.getElementById("last-name-box").value;
         var email = document.getElementById("email-box").value;
         var message = document.getElementById("message-box").value;
+        var phone = document.getElementById("phone-box").value;
+
+
 
         // Vérification des règles de validation
         var namePattern = /^[A-Za-z]+(?:-[A-Za-z]+)?$/;// Expression régulière pour les noms et prénoms composés
-
+        var phonePattern = /^[0-9]{10}$/;// Expression régulière pour les numéros de téléphone
         if (!namePattern.test(name)) {
             alert("Please enter your name with only alphabetic characters.");
+            event.preventDefault();
+            return false;
+        }
+
+        if (!phonePattern.test(phone)) {
+            alert("Please enter a valid phone number.");
             event.preventDefault();
             return false;
         }
