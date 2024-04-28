@@ -12,7 +12,7 @@
 }
 
 :root {
-    --main-color:#2288ff;
+    --main-color:#000000;
     --second-color:#192f6a;
     --text-color:#314862;
     --bg-color:#fff;
@@ -120,7 +120,7 @@ header {
 }
 
 .btn:hover{
-    background: #7aace9;
+    background: #000000;
 }
 
 /* Home */
